@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { MantineProvider } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
+import './global.css';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
