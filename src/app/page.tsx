@@ -6,7 +6,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <BackgroundImage src="https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/app/assets/yami.png">
+    <BackgroundImage src="https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/assets/yami.png">
       <Box h={"100vh"} w={"100vw"} >
         <Flex
           display={"flex"}
@@ -33,3 +33,7 @@ export default function Home() {
     </BackgroundImage>
   );
 }
+
+
+//https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/app/assets/yami.png
+//https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/assets/yami.png
