@@ -1,31 +1,37 @@
- import { Box, Flex, Text } from "@mantine/core";
- import { useQuery } from "@tanstack/react-query";
- 
+'use client';
 
-// interface Cards{
-//     name: string;
-//     level: string;
-//     atk: number;
-//     def: number;
-// }
+import { useQuery } from '@tanstack/react-query';
+import { fetchMonsters } from '../../../services/yugiohAPI'; // Importando a função de fetch
+import { Box, Loader, Text, Flex } from "@mantine/core";
 
+// Página de Monstros
+export default function MonstrosTCG() {
+  // Chamada da API usando useQuery
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['monsters'],
+    queryFn: fetchMonsters,
+  });
 
- function MonstrosTCG() {
-    
-//     const {isLoading, error} = useQuery({
-//         queryKey: ['ygh'],
-//         queryFn: async () => {
-//             const res: 
-//         }
-//     }) 
+  // Estado de carregamento
+  if (isLoading) return <Loader />;
+
+  // Tratamento de erro
+  if (error instanceof Error) {
+    return <Text>Erro ao carregar as cartas: {error.message}</Text>;
+  }
 
   return (
-     <Box>
-       <Flex>
-         Monstros
-       </Flex>
-     </Box>
-   );
- }
-
- export default MonstrosTCG;
+    <Box>
+      <Text size="xl" mb={20}>Cartas de Monstros</Text>
+      {/* Renderizando cada carta */}
+      <Flex direction="column" gap="md">
+        {data?.map((card: any) => (
+          <Box key={card.id} p={20}>
+            <Text>Nome: {card.name}</Text>
+            <Text>Tipo: {card.type}</Text>
+          </Box>
+        ))}
+      </Flex>
+    </Box>
+  );
+}
