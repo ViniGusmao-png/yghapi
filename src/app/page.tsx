@@ -1,12 +1,12 @@
 "use client";
+import Botao from "@/components/button";
 import { BackgroundImage, Box, Button, Flex, Image } from "@mantine/core";
-import { useRouter } from "next/navigation";
+
 
 export default function Home() {
-  const router = useRouter();
 
   return (
-    <BackgroundImage src="https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/app/assets/yami.png">
+    <BackgroundImage src="https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/assets/yami.png">
       <Box h={"100vh"} w={"100vw"} >
         <Flex
           display={"flex"}
@@ -18,18 +18,14 @@ export default function Home() {
           bg={"black"}
         >
           <Flex style={{ display: "flex", gap: "10px" }}>
-            <Button onClick={() => router.push("/pages/monstros")}>
-              Cartas de monstros
-            </Button>
-            <Button onClick={() => router.push("/pages/magias")}>
-              Cartas de magia
-            </Button>
-            <Button onClick={() => router.push("/pages/armadilhas")}>
-              Cartas de armadilha
-            </Button>
+            <Botao/>
           </Flex>
         </Flex>
       </Box>
     </BackgroundImage>
   );
 }
+
+
+//https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/app/assets/yami.png
+//https://raw.githubusercontent.com/ViniGusmao-png/yghapi/refs/heads/master/src/assets/yami.png
