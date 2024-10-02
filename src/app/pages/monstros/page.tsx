@@ -1,6 +1,6 @@
-// import { Box, Flex, Text } from "@mantine/core";
-// import { useQuery } from "@tanstack/react-query";
-// import axios, { AxiosResponse } from "axios";
+ import { Box, Flex, Text } from "@mantine/core";
+ import { useQuery } from "@tanstack/react-query";
+ 
 
 // interface Cards{
 //     name: string;
@@ -10,7 +10,7 @@
 // }
 
 
-// function MonstrosTCG() {
+ function MonstrosTCG() {
     
 //     const {isLoading, error} = useQuery({
 //         queryKey: ['ygh'],
@@ -19,13 +19,13 @@
 //         }
 //     }) 
 
-//   return (
-//     <Box>
-//       <Flex>
-//         Monstros
-//       </Flex>
-//     </Box>
-//   );
-// }
+  return (
+     <Box>
+       <Flex>
+         Monstros
+       </Flex>
+     </Box>
+   );
+ }
 
-// export default MonstrosTCG;
+ export default MonstrosTCG;
