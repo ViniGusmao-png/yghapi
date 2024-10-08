@@ -1,27 +1,17 @@
 // import axios from 'axios';
-// import { error } from 'console';
+// import { useQuery } from "@tanstack/react-query";
 
-// // Função para buscar cartas de monstros da API do Yu-Gi-Oh!
-// export const fetchMonsters = async () => {
-//   const { data } = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?type=monster');
-//   if(!res.ok){
-//     throw new Error('Error fetching data')
+// // Função para buscar todas as cartas da API do Yu-Gi-Oh!
+// export const fetchCards = async () => {
+//   try {
+//     const { data } = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php');
+//     return data.data; // Retorna todos os dados das cartas
+//   } catch (error) {
+//     throw new Error('Erro ao buscar os dados');
 //   }
-//   const data = await res.json();
-//   return data.data.filter(card =>
-//     card.type.includes("Monster")
-//   )
 // };
-import { useQuery } from "@tanstack/react-query";
 
-export async function fetchMonsters() {
-  const res = await fetch("https://db.ygoprodeck.com/api/v7/cardinfo.php?");
-
-  if (!res.ok) {
-    throw new Error('Erro ao buscar os dados');
-  }
-
-  const data = await res.json();
-  return data.data; // Supondo que 'data.data' contenha os resultados dos cards.
-}
-
+// // Utilizando o TanStack Query para buscar as cartas
+// export const useCardsQuery = () => {
+//   return useQuery( ['cards'] , fetchCards);
+// };
