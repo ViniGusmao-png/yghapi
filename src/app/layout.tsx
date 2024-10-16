@@ -2,6 +2,7 @@
 import localFont from "next/font/local";
 import { MantineProvider } from "@mantine/core";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { useState } from "react";
 import './global.css';
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <MantineProvider>
         <QueryClientProvider client={queryClient}>
         {children}
+        <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
         </MantineProvider>
       </body>
