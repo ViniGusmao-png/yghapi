@@ -30,7 +30,7 @@ export default function RootLayout({
         <MantineProvider>
         <QueryClientProvider client={queryClient}>
         {children}
-        <ReactQueryDevtools initialIsOpen={false} />
+        <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
         </MantineProvider>
       </body>
