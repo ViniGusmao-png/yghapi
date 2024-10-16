@@ -37,26 +37,26 @@ export default function MonstrosTCG() {
           <Text style={{fontSize:'42px'}}>Cartas de Monstros</Text>
         </Flex>
 
-      <Flex w={'25%'} display={'flex'} align={'center'} direction="column" bg={'#8F7A33'} style={{border:'1px solid blue', gap: '20px'}}>
+      <Flex w={'22%'} display={'flex'} align={'center'} direction="column" bg={'#7B6B00'} style={{border:'6px solid #434552',borderRadius:'7px', gap: '20px'}}>
         {/* Cabeçalho da carta */}
-        <Flex display={'flex'}  direction='row' style={{border:'1px solid red', gap:'30px'}}>
-          <Flex style={{border:'1px solid orange', width: '330px'}}>
-            <Text>Nome</Text>
+        <Flex display={'flex'}  direction='row' align={'center'} style={{border:'outset #BDA500', gap:'30px', marginTop:'5px', padding:'0px 10px 0px 10px'}}>
+          <Flex display={'flex'} direction={'row'} align={'center'} style={{ width: '330px', height: '25px'}}>
+            <Text> Nome</Text>
           </Flex>
-          <Flex display={'flex'}  direction='row' style={{border:'1px solid green', width: '70px'}}>
-            <Text>LVL</Text>
+          <Flex display={'flex'}  direction='row' justify={'center'} style={{borderRadius:'50%', border:'ridge #BDA500', backgroundColor:'#B09A11', width:'auto',margin:'2px 0px 2px 0px', padding:'3px 4px 3px 4px'}}>
+            <Text>10</Text>
           </Flex>
         </Flex>
 
         {/* Parte de descrição da carta */}
-        <Flex>
-          <Text>Descrição</Text>
+        <Flex display={'flex'}  direction='row' style={{border:'2px solid #7B2101', backgroundColor:'#D1C074', width: '370px',margin:'2px 0px 2px 0px', padding:'3px 4px 3px 4px'}}>
+          <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iure perspiciatis ex rerum ipsa deserunt autem perferendis temporibus, nostrum nemo culpa maxime, numquam esse obcaecati veniam itaque ipsam, cumque hic.</Text>
         </Flex>
         
         {/* Ataque e Defesa */}
-        <Flex>
-          <Text>ATK</Text>
-          <Text>DEF</Text>
+        <Flex display={'flex'} direction={'column'} style={{border:'outset #BDA500', gap:'10px',marginBottom:'5px', padding:'0px 10px 0px 10px'}}>
+          <Text>ATK 3000</Text>
+          <Text>DEF 2500</Text>
         </Flex>
 
       </Flex>
